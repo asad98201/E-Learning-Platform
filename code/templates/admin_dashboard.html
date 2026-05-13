@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_dashboard.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('admin_dashboard') }}">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+            </a>
+        </div>
+        <div class="logout">
+            <a href="{{ url_for('login') }}">Log Out</a>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <h1>Admin Dashboard</h1>
+        <p>Manage all database tables below:</p>
+        <div class="table-buttons">
+            {% for table1 in tables %}
+            <a href="{{ url_for('table_view', table_name=table1) }}" class="table-button">{{ table }}</a>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>

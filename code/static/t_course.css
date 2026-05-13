@@ -1,0 +1,125 @@
+/* General Styling */
+body {
+    background-color: #001a33; /* Blue theme */
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004080;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #00509e;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #0077cc;
+}
+
+/* Course Details */
+.details-card {
+    background-color: rgba(0, 102, 204, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.2);
+}
+
+/* Activities Grid */
+.activities-grid,
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.activity-card {
+    background-color: #003366;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Upload Section */
+.upload-resource {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.file-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="file"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #00509e;
+    border-radius: 5px;
+    background-color: rgba(0, 80, 158, 0.1);
+    color: white;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #00509e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0077cc;
+}

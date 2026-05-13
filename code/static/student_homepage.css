@@ -1,0 +1,199 @@
+/* General Dark Theme */
+body {
+    background-color: #0d0121;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #120037;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links .dropdown-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links .dropdown-button:hover {
+    color: #6a5acd;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #6a5acd;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #1a0a3c;
+    top: 50px;
+    left: 0;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+    animation: dropdown-fade 0.3s ease-out;
+}
+
+@keyframes dropdown-fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 8px 15px;
+    display: block;
+    color: white;
+}
+
+/* New Courses Section */
+/* Carousel Section */
+.new-courses {
+    padding: 80px 20px; /* Added breathing space for hover animations */
+    text-align: center;
+}
+
+.carousel {
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.course-card {
+    background-color: #1f053e;
+    color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(106, 90, 205, 0.6);
+    flex: 0 0 14%; /* Adjusted for 7 cards in the carousel */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(106, 90, 205, 0.9);
+}
+
+/* Carousel Buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 0 15px rgba(106, 90, 205, 0.8);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.carousel-button:hover {
+    background-color: #9f86ff;
+    transform: scale(1.1);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Activities Section */
+.activities {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.activities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.activity-card {
+    background-color: #1f053e;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(106, 90, 205, 0.6);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(106, 90, 205, 0.9);
+}

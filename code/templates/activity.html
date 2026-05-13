@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ activity.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='course.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/" class="logo">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/activities">Activities</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Activity Details -->
+        <section class="activity-details">
+            <div class="details-card">
+                <h1>{{ activity.title }}</h1>
+                <p><strong>Due Date:</strong> {{ activity.due_date }}</p>
+                <p><strong>Description:</strong> {{ activity.description }}</p>
+            </div>
+        </section>
+
+        <!-- Submission Section -->
+        <section class="submission">
+            <h2>Submission</h2>
+            <form method="POST" enctype="multipart/form-data">
+                <label for="file" class="file-label"></label>
+                <input type="file" id="file" name="file" required>
+                <button class="submit-button" type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        const dropdownButtons = document.querySelectorAll(".dropdown-button");
+
+        dropdownButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const dropdown = event.target.closest(".dropdown");
+            dropdown.classList.add("active");
+
+            setTimeout(() => {
+                dropdown.classList.remove("active");
+            }, 2000); // Auto-hide after 2 seconds
+        });
+        });
+    </script>
+</body>
+</html>

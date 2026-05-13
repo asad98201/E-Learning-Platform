@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ table_name | capitalize }} Table</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='table.css') }}">
+</head>
+<body>
+    <div class="table-container">
+        <h1>{{ table_name | capitalize }}</h1>
+        <table>
+            <thead>
+                <tr>
+                    {% for column in columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                    <tr>
+                        {% for column in columns %}
+                            <td>{{ row[column] }}</td>  <!-- Access the value using the column name -->
+                        {% endfor %}
+                        <td>
+                            <button class="edit-button" onclick="openEditPopup('{{ row | tojson | safe }}')">Edit</button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button class="action-button" onclick="openInsertPopup()">Add New Row</button>
+    </div>
+
+    <!-- Popup for Editing -->
+    <div class="popup" id="edit-popup">
+        <div class="popup-content">
+            <h2>Edit Row</h2>
+            <form id="edit-form"></form>
+            <div class="popup-buttons">
+                <button class="cancel-button" onclick="closePopup('edit-popup')">Cancel</button>
+                <button class="confirm-button" onclick="submitEditForm()">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for Inserting -->
+    <div class="popup" id="insert-popup">
+        <div class="popup-content">
+            <h2>Insert New Row</h2>
+            <form id="insert-form">
+                {% for column in columns %}
+                    <label for="{{ column }}">{{ column }}</label>
+                    <input type="text" id="{{ column }}" name="{{ column }}" placeholder="Enter value or leave blank">
+                {% endfor %}
+            </form>
+            <div class="popup-buttons">
+                <button class="cancel-button" onclick="closePopup('insert-popup')">Cancel</button>
+                <button class="confirm-button" onclick="submitInsertForm()">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const columns = JSON.parse('{{ columns | tojson | safe }}');
+
+        function openEditPopup(rowData) {
+            const row = JSON.parse(rowData); // Parse JSON string
+            const popup = document.getElementById('edit-popup');
+            const form = document.getElementById('edit-form');
+            form.innerHTML = '';
+
+            columns.forEach((column) => {
+                const inputField = `
+                    <label for="${column}">${column}</label>
+                    <input type="text" id="${column}" name="${column}" value="${row[column] || ''}">
+                `;
+                form.innerHTML += inputField;
+            });
+
+            popup.classList.add('active');
+        }
+
+        function openInsertPopup() {
+            const popup = document.getElementById('insert-popup');
+            popup.classList.add('active');
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).classList.remove('active');
+        }
+
+        function submitEditForm() {
+            const formData = new FormData(document.getElementById('edit-form'));
+            fetch(`/update_row/{{ table_name }}`, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    location.reload();
+                } else {
+                    alert(data.error || 'An error occurred');
+                }
+            });
+        }
+
+        function submitInsertForm() {
+            const formData = new FormData(document.getElementById('insert-form'));
+            fetch(`/insert_row/{{ table_name }}`, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    location.reload();
+                } else {
+                    alert(data.error || 'An error occurred');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

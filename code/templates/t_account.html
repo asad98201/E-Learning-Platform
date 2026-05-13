@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Account Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='t_account.css') }}">
+</head>
+<body>
+    <!-- Teacher Navigation -->
+    <nav class="navbar">
+        <a href="/teacher_homepage" class="logo">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <button class="dropdown-button" onclick="toggleDropdown(this)">Account</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/t_account">View Account</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Account Details Section -->
+    <section class="account-details">
+        <h1>Your Account</h1>
+        <div class="details-container">
+            <div class="detail-item">
+                <p><strong>First Name:</strong> {{ teacher.First_name }}</p>
+                <button onclick="openEditPopup('First Name', '{{ teacher.First_name }}')">Edit</button>
+            </div>
+            <div class="detail-item">
+                <p><strong>Last Name:</strong> {{ teacher.Last_name }}</p>
+                <button onclick="openEditPopup('Last Name', '{{ teacher.Last_name }}')">Edit</button>
+            </div>
+            <div class="detail-item">
+                <p><strong>Email:</strong> {{ teacher.Email }}</p>
+                <button onclick="openEditPopup('Email', '{{ teacher.Email }}')">Edit</button>
+            </div>
+            <div class="detail-item">
+                <p><strong>Phone Number:</strong> {{ teacher.Phone_number }}</p>
+                <button onclick="openEditPopup('Phone Number', '{{ teacher.Phone_number }}')">Edit</button>
+            </div>
+            <div class="detail-item">
+                <p><strong>Address:</strong> {{ teacher.Address }}</p>
+                <button onclick="openEditPopup('Address', '{{ teacher.Address }}')">Edit</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edit Popup -->
+    <div id="editPopup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Edit Account</h2>
+            <p id="editField"></p>
+            <input type="text" id="newValue" placeholder="New Value" />
+            <input type="password" id="password" placeholder="Enter Password" />
+            <div class="popup-buttons">
+                <button onclick="confirmEdit()">Save</button>
+                <button class="cancel" onclick="closePopup()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentField = "";
+
+        function openEditPopup(field, currentValue) {
+            currentField = field;
+            document.getElementById("editField").textContent = field.replace("_", " ");
+            document.getElementById("newValue").value = currentValue;
+            document.getElementById("password").value = "";  // Clear password field
+
+            // Show the popup
+            document.getElementById("editPopup").classList.remove("hidden");
+            document.getElementById("editPopup").classList.add("show");
+        }
+
+        function closePopup() {
+            document.getElementById("editPopup").classList.add("hidden");
+            document.getElementById("editPopup").classList.remove("show");
+        }
+
+        function confirmEdit() {
+            const password = document.getElementById("password").value;
+            const newValue = document.getElementById("newValue").value;
+
+            if (!password || !newValue) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Submit data via AJAX (you may need to adjust this based on your server-side logic)
+            fetch(`/update_account`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    field: currentField,
+                    value: newValue,
+                    password: password,
+                }),
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.success) {
+                    alert("Updated successfully!");
+                    location.reload();  // Reload to show updated data
+                } else {
+                    alert(data.message);
+                }
+            });
+
+            // Close the popup after confirmation
+            closePopup();
+        }
+
+        function toggleDropdown(button) {
+            const dropdownMenu = button.nextElementSibling;
+            dropdownMenu.classList.toggle("show");
+
+            // Automatically hide the dropdown after 2 seconds
+            setTimeout(() => {
+                dropdownMenu.classList.remove("show");
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

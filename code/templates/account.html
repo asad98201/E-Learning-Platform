@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='account.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="/" class="logo">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <button class="dropdown-button">Courses</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/enrolled_courses">Enrolled Courses</a></li>
+                    <li><a href="/all_courses">All Courses</a></li>
+                </ul>
+            </li>
+            <li><a href="/activities">Activities</a></li>
+            <li><a href="/feedback">Feedback</a></li>
+            <li class="dropdown">
+                <button class="dropdown-button">Account</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/account">View Account</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Account Details Section -->
+    <section class="account-details">
+        <h1>Your Account</h1>
+        <div class="details-container">
+            <div class="detail-item">
+                <p><strong>First Name:</strong> {{ student.First_name }}</p>
+                <button onclick="openEditPopup('first_name', '{{ student.First_name }}')">Edit</button>
+            </div>
+            <div class="detail-item">
+                <p><strong>Last Name:</strong> {{ student.Last_name }}</p>
+                <button onclick="openEditPopup('last_name', '{{ student.Last_name }}')">Edit</button>
+            </div>
+            <div class="detail-item">
+                <p><strong>Email:</strong> {{ student.Email }}</p>
+                <button onclick="openEditPopup('email', '{{ student.Email }}')">Edit</button>
+            </div>
+            <div class="detail-item">
+                <p><strong>Phone Number:</strong> {{ student.Phone_number }}</p>
+                <button onclick="openEditPopup('phone_number', '{{ student.Phone_number }}')">Edit</button>
+            </div>
+            <div class="detail-item">
+                <p><strong>Address:</strong> {{ student.Address }}</p>
+                <button onclick="openEditPopup('address', '{{ student.Address }}')">Edit</button>
+            </div>
+            <div class="detail-item">
+                <p><strong>Date of Birth:</strong> {{ student.Date_of_Birth }}</p>
+                <button onclick="openEditPopup('date_of_birth', '{{ student.Date_of_Birth }}')">Edit</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edit Popup -->
+    <div id="editPopup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Edit <span id="editField"></span></h2>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <label for="newValue">New Value:</label>
+            <input type="text" id="newValue" placeholder="Enter new value">
+            <div class="popup-buttons">
+                <button onclick="confirmEdit()">Confirm</button>
+                <button onclick="closePopup()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dropdownButtons = document.querySelectorAll(".dropdown-button");
+
+        dropdownButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const dropdown = event.target.closest(".dropdown");
+            dropdown.classList.add("active");
+
+            setTimeout(() => {
+                dropdown.classList.remove("active");
+            }, 2000); // Auto-hide after 2 seconds
+        });
+        });
+    </script>
+</body>
+</html>

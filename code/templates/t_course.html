@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ course.course_name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='t_course.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/teacher_homepage" class="logo">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <button class="dropdown-button" onclick="toggleDropdown(this)">Account</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/t_account">View Account</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Course Details -->
+        <section class="course-details">
+            <div class="details-card">
+                <h1>{{ course.course_name }}</h1>
+                <p><strong>Module(s):</strong> 
+                    {% for module in modules %}
+                        {{ module['Module_name'] }}{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </p>        
+                <p><strong>Duration:</strong> {{ course.duration }} weeks</p>
+                <p><strong>Description:</strong> {{ course.description }}</p>
+            </div>
+        </section>
+
+        <!-- Activities -->
+        <section class="activities">
+            <h2>Activities</h2>
+            {% if activities %}
+            <div class="activities-grid">
+                {% for activity in activities %}
+                <div class="activity-card">
+                    <h3>{{ activity.title }}</h3>
+                    <p><strong>Due:</strong> {{ activity.due_date }}</p>
+                    <p>{{ activity.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+                <p>No activities available for this course.</p>
+            {% endif %}
+        </section>
+
+        <!-- Resources -->
+        <section class="resources">
+            <h2>Module Resources</h2>
+            <div class="resources-grid">
+                {% for resource in resources %}
+                <div class="resource-card">
+                    <a href="{{ url_for('download_resource', resource_id=resource['id']) }}" class="resource-link">
+                        {{ resource.resource_name }}
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Upload Module Resource -->
+            <div class="upload-resource">
+                <h3>Upload a New Module Resource</h3>
+                <form method="POST" action="{{ url_for('upload_resource', course_id=course.course_id) }}" enctype="multipart/form-data">
+                    <label for="resource_name" class="file-label">Resource Name:</label>
+                    <input type="text" id="resource_name" name="resource_name" required>
+                    <label for="resource_file" class="file-label">Choose File:</label>
+                    <input type="file" id="resource_file" name="resource_file" required>
+                    <button type="submit" class="submit-button">Upload</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    function toggleDropdown(button) {
+        const dropdownMenu = button.nextElementSibling;
+        dropdownMenu.classList.toggle('show');
+        setTimeout(() => dropdownMenu.classList.remove('show'), 2000);
+    }
+    </script>
+</body>
+</html>

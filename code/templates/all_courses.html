@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Courses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='all_courses.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/" class="logo">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <button class="dropdown-button">Courses</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/enrolled_courses">Enrolled Courses</a></li>
+                    <li><a href="/all_courses">All Courses</a></li>
+                </ul>
+            </li>
+            <li><a href="/activities">Activities</a></li>
+            <li><a href="/feedback">Feedback</a></li>
+            <li class="dropdown">
+                <button class="dropdown-button">Account</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/account">View Account</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Search and Filter -->
+    <section class="search-filter">
+        <form method="get" action="/all_courses" class="search-bar">
+            <input type="text" name="search" placeholder="Search courses..." value="{{ search_query }}">
+            <button type="submit">Search</button>
+        </form>
+        <div class="filter-dropdown">
+            <button class="filter-button">Filter by</button>
+            <ul class="filter-menu">
+                <li><a href="/all_courses?filter=alphabetical">By A-Z</a></li>
+                <li><a href="/all_courses?filter=popularity">By Popularity</a></li>
+                <li><a href="/all_courses?filter=duration">By Duration</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses">
+        <h1>Courses</h1>
+        <div class="courses-grid">
+            {% for course in courses %}
+            <div class="course-card" data-url="{{ url_for('course_details', course_id=course['id']) }}">
+                <h2>{{ course.title }}</h2>
+                <p><strong>Module:</strong> {{ course.module }}</p>
+                <p><strong>Instructor:</strong> {{ course.teacher_name }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='all_courses.js') }}"></script>
+    <script>
+        const dropdownButtons = document.querySelectorAll(".dropdown-button");
+
+        dropdownButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const dropdown = event.target.closest(".dropdown");
+            dropdown.classList.add("active");
+
+            setTimeout(() => {
+                dropdown.classList.remove("active");
+            }, 2000); // Auto-hide after 2 seconds
+        });
+        });
+    </script>
+</body>
+</html>

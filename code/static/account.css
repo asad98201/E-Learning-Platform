@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+    background-color: #0d0121;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #120037;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links .dropdown-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links .dropdown-button:hover {
+    color: #6a5acd;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #6a5acd;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #1a0a3c;
+    top: 50px;
+    left: 0;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+    animation: dropdown-fade 0.3s ease-out;
+}
+
+@keyframes dropdown-fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 8px 15px;
+    display: block;
+    color: white;
+}
+
+/* Account Details Section */
+.account-details {
+    padding: 50px;
+    text-align: center;
+}
+
+.account-details h1 {
+    font-size: 2rem;
+    color: #6a5acd;
+    margin-bottom: 20px;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.detail-item {
+    background-color: #1f053e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(106, 90, 205, 0.6);
+}
+
+.detail-item button {
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.detail-item button:hover {
+    background-color: #5436a4;
+}
+
+/* General Popup Styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.popup.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Popup Content Container */
+.popup-content {
+    background-color: #1a0a3c;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(106, 90, 205, 1);
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Popup Heading */
+.popup-content h2 {
+    font-size: 1.8rem;
+    color: #6a5acd;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #6a5acd;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Input Fields */
+.popup-content input[type="password"], 
+.popup-content input[type="text"], 
+.popup-content input[type="email"], 
+.popup-content input[type="tel"], 
+.popup-content input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: #240d47;
+    color: white;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.popup-content input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Popup Buttons */
+.popup-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.popup-buttons button {
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.popup-buttons button:hover {
+    background-color: #9f86ff;
+    transform: scale(1.05);
+}
+
+.popup-buttons button.cancel {
+    background-color: #a00000;
+}
+
+.popup-buttons button.cancel:hover {
+    background-color: #d32f2f;
+}

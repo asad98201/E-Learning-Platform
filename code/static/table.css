@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Table Container */
+.table-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-container h1 {
+    text-align: center;
+    color: #6a5acd;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #6a5acd;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.action-button {
+    margin: 10px 0;
+    background-color: #6a5acd;
+    color: white;
+}
+
+.edit-button {
+    background-color: #ffc107;
+    color: black;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+.popup-content h2 {
+    color: #6a5acd;
+    margin-bottom: 20px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button.cancel-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.confirm-button {
+    background-color: #6a5acd;
+    color: white;
+}
+
+/* Insert Popup Specific Styles */
+#insert-popup .popup-content {
+    width: 80%;
+}
+
+#insert-popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#insert-popup input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

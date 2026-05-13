@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='teacher_homepage.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/teacher_homepage" class="logo">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <button class="dropdown-button" onclick="toggleDropdown(this)">Account</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/t_account">View Account</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>        
+
+    <!-- Main Content -->
+    <main>
+        <h1>Manage Courses</h1>
+        <section class="course-cards">
+            {% if courses %}
+                <div class="cards-grid">
+                    {% for course in courses %}
+                        <div class="course-card" onclick="location.href='/t_course/{{ course.course_id }}'">
+                            <h2>{{ course.course_name }}</h2>
+                            <p><strong>Duration:</strong> {{ course.duration }} weeks</p>
+                            <p>{{ course.description }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No courses to display. Create or assign courses to manage.</p>
+            {% endif %}
+        </section>
+    </main>
+    <script>
+    function toggleDropdown(button) {
+        const dropdownMenu = button.nextElementSibling;
+
+        // Toggle visibility
+        dropdownMenu.classList.toggle('show');
+
+        // Automatically hide the dropdown after 2 seconds
+        setTimeout(() => {
+            dropdownMenu.classList.remove('show');
+        }, 2000);
+    }
+    </script>
+</body>
+</html>

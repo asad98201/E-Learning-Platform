@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_efgosK6DEe-MX58iUoC3NA" name="OLP_ACTIVITY_DIAGRAM">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_eg9aMK6DEe-MX58iUoC3NA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_egSEwK6DEe-MX58iUoC3NA" name="Activity1" node="_vh_5UK6DEe-MX58iUoC3NA _9-L2EK6DEe-MX58iUoC3NA _LSAckK6EEe-MX58iUoC3NA _oXbTkK6EEe-MX58iUoC3NA _yTVjEK6EEe-MX58iUoC3NA _8YXSUK6EEe-MX58iUoC3NA _OrN-oK6FEe-MX58iUoC3NA _dgPSIK6FEe-MX58iUoC3NA _t8N8YK6FEe-MX58iUoC3NA _alW_8K6GEe-MX58iUoC3NA _HrSGIK6HEe-MX58iUoC3NA _VGgVIK6HEe-MX58iUoC3NA _tSkloK6JEe-MX58iUoC3NA">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_C8wo4K6EEe-MX58iUoC3NA" target="_9-L2EK6DEe-MX58iUoC3NA" source="_vh_5UK6DEe-MX58iUoC3NA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_TI1O4K6EEe-MX58iUoC3NA" target="_LSAckK6EEe-MX58iUoC3NA" source="_9-L2EK6DEe-MX58iUoC3NA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_pi5oMK6EEe-MX58iUoC3NA" name="NOT ELIGIBLE" target="_oXbTkK6EEe-MX58iUoC3NA" source="_LSAckK6EEe-MX58iUoC3NA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_1IX2gK6EEe-MX58iUoC3NA" name="ELIGIBLE" target="_yTVjEK6EEe-MX58iUoC3NA" source="_LSAckK6EEe-MX58iUoC3NA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="__RTOUK6EEe-MX58iUoC3NA" name="SELECT_COURSE" target="_8YXSUK6EEe-MX58iUoC3NA" source="_yTVjEK6EEe-MX58iUoC3NA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_kRHwEK6FEe-MX58iUoC3NA" name="CONFIRMATION" target="_dgPSIK6FEe-MX58iUoC3NA" source="_OrN-oK6FEe-MX58iUoC3NA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_e5oRgK6GEe-MX58iUoC3NA" name="CONFIRMATION" target="_alW_8K6GEe-MX58iUoC3NA" source="_dgPSIK6FEe-MX58iUoC3NA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_n2pP0K6GEe-MX58iUoC3NA" name="NOT CONFIRMED" target="_oXbTkK6EEe-MX58iUoC3NA" source="_alW_8K6GEe-MX58iUoC3NA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_NkOPcK6HEe-MX58iUoC3NA" name="REQUEST TO ENROLL" target="_HrSGIK6HEe-MX58iUoC3NA" source="_8YXSUK6EEe-MX58iUoC3NA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_cX10wK6HEe-MX58iUoC3NA" target="_VGgVIK6HEe-MX58iUoC3NA" source="_HrSGIK6HEe-MX58iUoC3NA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_fRHvAK6HEe-MX58iUoC3NA" target="_oXbTkK6EEe-MX58iUoC3NA" source="_VGgVIK6HEe-MX58iUoC3NA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_lceeAK6HEe-MX58iUoC3NA" name="ENROLL" target="_OrN-oK6FEe-MX58iUoC3NA" source="_VGgVIK6HEe-MX58iUoC3NA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_y1teEK6JEe-MX58iUoC3NA" name="CONFIRMED" target="_tSkloK6JEe-MX58iUoC3NA" source="_alW_8K6GEe-MX58iUoC3NA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_8jgZEK6JEe-MX58iUoC3NA" name="FEEDBACK GIVEN" target="_t8N8YK6FEe-MX58iUoC3NA" source="_tSkloK6JEe-MX58iUoC3NA"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_vh_5UK6DEe-MX58iUoC3NA" name="START_ENROLLMENT" outgoing="_C8wo4K6EEe-MX58iUoC3NA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_9-L2EK6DEe-MX58iUoC3NA" name="VERIFY_STD_ELIGIBILITY" incoming="_C8wo4K6EEe-MX58iUoC3NA" outgoing="_TI1O4K6EEe-MX58iUoC3NA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_LSAckK6EEe-MX58iUoC3NA" name="VERIFY" incoming="_TI1O4K6EEe-MX58iUoC3NA" outgoing="_pi5oMK6EEe-MX58iUoC3NA _1IX2gK6EEe-MX58iUoC3NA"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_oXbTkK6EEe-MX58iUoC3NA" name="ENROLLMENT DENIED" incoming="_pi5oMK6EEe-MX58iUoC3NA _n2pP0K6GEe-MX58iUoC3NA _fRHvAK6HEe-MX58iUoC3NA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_yTVjEK6EEe-MX58iUoC3NA" name="FETCH_AVAILABLE_COURSES" incoming="_1IX2gK6EEe-MX58iUoC3NA" outgoing="__RTOUK6EEe-MX58iUoC3NA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_8YXSUK6EEe-MX58iUoC3NA" name="SELECT_COURSES" incoming="__RTOUK6EEe-MX58iUoC3NA" outgoing="_NkOPcK6HEe-MX58iUoC3NA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_OrN-oK6FEe-MX58iUoC3NA" name="CREATE_ENROLLMENT_RECORD" incoming="_lceeAK6HEe-MX58iUoC3NA" outgoing="_kRHwEK6FEe-MX58iUoC3NA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_dgPSIK6FEe-MX58iUoC3NA" name="PROVIDE_CONFIRMATION" incoming="_kRHwEK6FEe-MX58iUoC3NA" outgoing="_e5oRgK6GEe-MX58iUoC3NA"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_t8N8YK6FEe-MX58iUoC3NA" name="ENROLLMENT COMPLETE" incoming="_8jgZEK6JEe-MX58iUoC3NA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_alW_8K6GEe-MX58iUoC3NA" name="" incoming="_e5oRgK6GEe-MX58iUoC3NA" outgoing="_n2pP0K6GEe-MX58iUoC3NA _y1teEK6JEe-MX58iUoC3NA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_HrSGIK6HEe-MX58iUoC3NA" name="ADMINISTRATOR" incoming="_NkOPcK6HEe-MX58iUoC3NA" outgoing="_cX10wK6HEe-MX58iUoC3NA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_VGgVIK6HEe-MX58iUoC3NA" name="DECISION" incoming="_cX10wK6HEe-MX58iUoC3NA" outgoing="_fRHvAK6HEe-MX58iUoC3NA _lceeAK6HEe-MX58iUoC3NA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_tSkloK6JEe-MX58iUoC3NA" name="FEEDBACK" incoming="_y1teEK6JEe-MX58iUoC3NA" outgoing="_8jgZEK6JEe-MX58iUoC3NA"/>
+  </packagedElement>
+</uml:Model>

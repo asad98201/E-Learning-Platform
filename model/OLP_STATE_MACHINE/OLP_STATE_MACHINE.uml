@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ">
+  <uml:Model xmi:id="_mqdHMLJwEe-RiKxTBWT2AQ" name="OLP_STATE_MACHINE">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_mrwuwLJwEe-RiKxTBWT2AQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_mq2IwLJwEe-RiKxTBWT2AQ" name="ONLINE LEARNING PLATFORM STATE MACHINE">
+      <region xmi:type="uml:Region" xmi:id="_mq_SsLJwEe-RiKxTBWT2AQ" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_wNT6sLK2Ee-RiKxTBWT2AQ" name="REQUEST TO ENROLL" source="_LqQNcLK2Ee-RiKxTBWT2AQ" target="_n_1i8LK2Ee-RiKxTBWT2AQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_wS1ecLK3Ee-RiKxTBWT2AQ" name="ASSIGNED TEACHER" source="_n_1i8LK2Ee-RiKxTBWT2AQ" target="_le6o4LK3Ee-RiKxTBWT2AQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_k6vvYLK4Ee-RiKxTBWT2AQ" name="TEACHER DUTIES" source="_le6o4LK3Ee-RiKxTBWT2AQ" target="_d8JlkLK4Ee-RiKxTBWT2AQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FweZ0LK6Ee-RiKxTBWT2AQ" source="_n_1i8LK2Ee-RiKxTBWT2AQ" target="_n_1i8LK2Ee-RiKxTBWT2AQ"/>
+        <subvertex xmi:type="uml:State" xmi:id="_KZxN4LJyEe-RiKxTBWT2AQ" name="STUDENT"/>
+        <subvertex xmi:type="uml:State" xmi:id="_pG_6wLJzEe-RiKxTBWT2AQ" name="State2"/>
+        <subvertex xmi:type="uml:State" xmi:id="_LqQNcLK2Ee-RiKxTBWT2AQ" name="STUDENT_ENROLLMENT">
+          <region xmi:type="uml:Region" xmi:id="_TV5qgLK2Ee-RiKxTBWT2AQ" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_IH-SILK5Ee-RiKxTBWT2AQ" source="_TV64oLK2Ee-RiKxTBWT2AQ" target="_WWGFELK2Ee-RiKxTBWT2AQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_J25SELK5Ee-RiKxTBWT2AQ" source="_WWGFELK2Ee-RiKxTBWT2AQ" target="_dPSKcLK2Ee-RiKxTBWT2AQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_O3tgkLK5Ee-RiKxTBWT2AQ" source="_dPSKcLK2Ee-RiKxTBWT2AQ" target="_gy7QULK2Ee-RiKxTBWT2AQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_di6wwLK5Ee-RiKxTBWT2AQ" source="_gy7QULK2Ee-RiKxTBWT2AQ" target="_mxgHkLK2Ee-RiKxTBWT2AQ"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_TV64oLK2Ee-RiKxTBWT2AQ" name=""/>
+            <subvertex xmi:type="uml:State" xmi:id="_WWGFELK2Ee-RiKxTBWT2AQ" name="LOGIN"/>
+            <subvertex xmi:type="uml:State" xmi:id="_dPSKcLK2Ee-RiKxTBWT2AQ" name="SELECT COURSE"/>
+            <subvertex xmi:type="uml:State" xmi:id="_gy7QULK2Ee-RiKxTBWT2AQ" name="REQUEST TO ENROLL"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_mxgHkLK2Ee-RiKxTBWT2AQ" name="FinalState5"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_n_1i8LK2Ee-RiKxTBWT2AQ" name="ADMIN MANAGMENT">
+          <region xmi:type="uml:Region" xmi:id="_zz8qMLK2Ee-RiKxTBWT2AQ" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_h-5z4LK5Ee-RiKxTBWT2AQ" name="VERIFIED" source="_3mQeMLK2Ee-RiKxTBWT2AQ" target="_CT9XALK3Ee-RiKxTBWT2AQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_kD4jYLK5Ee-RiKxTBWT2AQ" source="_CT9XALK3Ee-RiKxTBWT2AQ" target="_c9DVgLK3Ee-RiKxTBWT2AQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_mqbH0LK5Ee-RiKxTBWT2AQ" source="_c9DVgLK3Ee-RiKxTBWT2AQ" target="_fIaZ0LK3Ee-RiKxTBWT2AQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_WTKJALK6Ee-RiKxTBWT2AQ" source="_SEcF0LK6Ee-RiKxTBWT2AQ" target="_3mQeMLK2Ee-RiKxTBWT2AQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_YqRxYLK6Ee-RiKxTBWT2AQ" source="_zz94ULK2Ee-RiKxTBWT2AQ" target="_SEcF0LK6Ee-RiKxTBWT2AQ"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_zz94ULK2Ee-RiKxTBWT2AQ" name=""/>
+            <subvertex xmi:type="uml:State" xmi:id="_3mQeMLK2Ee-RiKxTBWT2AQ" name="STUDENT VERIFICATION"/>
+            <subvertex xmi:type="uml:State" xmi:id="_CT9XALK3Ee-RiKxTBWT2AQ" name="ENROLL"/>
+            <subvertex xmi:type="uml:State" xmi:id="_c9DVgLK3Ee-RiKxTBWT2AQ" name="UPDATE DATABASE"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_fIaZ0LK3Ee-RiKxTBWT2AQ"/>
+            <subvertex xmi:type="uml:State" xmi:id="_MpRdoLK6Ee-RiKxTBWT2AQ" name="State9">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_PIEbULK6Ee-RiKxTBWT2AQ">
+                <body>RECEIVE REQUEST</body>
+              </ownedComment>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_SEcF0LK6Ee-RiKxTBWT2AQ" name="RECEIVE REQUEST"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_le6o4LK3Ee-RiKxTBWT2AQ" name="COURSE MANAGMENT">
+          <region xmi:type="uml:Region" xmi:id="_tSghALK3Ee-RiKxTBWT2AQ" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_odqAALK5Ee-RiKxTBWT2AQ" source="_tSghCLK3Ee-RiKxTBWT2AQ" target="_8nu-kLK3Ee-RiKxTBWT2AQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_p1ShULK5Ee-RiKxTBWT2AQ" source="_8nu-kLK3Ee-RiKxTBWT2AQ" target="_OQou8LK4Ee-RiKxTBWT2AQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_q3xSALK5Ee-RiKxTBWT2AQ" source="_OQou8LK4Ee-RiKxTBWT2AQ" target="_Wc6z4LK4Ee-RiKxTBWT2AQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_sDp2ULK5Ee-RiKxTBWT2AQ" source="_Wc6z4LK4Ee-RiKxTBWT2AQ" target="_bkdVcLK4Ee-RiKxTBWT2AQ"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_tSghCLK3Ee-RiKxTBWT2AQ" name=""/>
+            <subvertex xmi:type="uml:State" xmi:id="_8nu-kLK3Ee-RiKxTBWT2AQ" name="ASSIGN TEACHER"/>
+            <subvertex xmi:type="uml:State" xmi:id="_OQou8LK4Ee-RiKxTBWT2AQ" name="INITIATE ACTIVITY"/>
+            <subvertex xmi:type="uml:State" xmi:id="_Wc6z4LK4Ee-RiKxTBWT2AQ" name="INITIATE FEEDBACK FORM"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_bkdVcLK4Ee-RiKxTBWT2AQ" name=""/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_d8JlkLK4Ee-RiKxTBWT2AQ" name="TEACHER MANAGMENT">
+          <region xmi:type="uml:Region" xmi:id="_gvHccLK4Ee-RiKxTBWT2AQ" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_t6cY0LK5Ee-RiKxTBWT2AQ" source="_gvIqkLK4Ee-RiKxTBWT2AQ" target="_1WfJELK4Ee-RiKxTBWT2AQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_vBv_ILK5Ee-RiKxTBWT2AQ" name="ACTIVITY PERFORMED" source="_1WfJELK4Ee-RiKxTBWT2AQ" target="_8mUz4LK4Ee-RiKxTBWT2AQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_yOKQwLK5Ee-RiKxTBWT2AQ" name="FEEDBACK GIVEN" source="_8mUz4LK4Ee-RiKxTBWT2AQ" target="_CqkOQLK5Ee-RiKxTBWT2AQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_0pVSsLK5Ee-RiKxTBWT2AQ" source="_CqkOQLK5Ee-RiKxTBWT2AQ" target="_FPfCELK5Ee-RiKxTBWT2AQ"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_gvIqkLK4Ee-RiKxTBWT2AQ" name=""/>
+            <subvertex xmi:type="uml:State" xmi:id="_1WfJELK4Ee-RiKxTBWT2AQ" name="ASSIGN ACTIVITY"/>
+            <subvertex xmi:type="uml:State" xmi:id="_8mUz4LK4Ee-RiKxTBWT2AQ" name="EVALUATE ACTIVITY"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_AT4qwLK5Ee-RiKxTBWT2AQ" name=""/>
+            <subvertex xmi:type="uml:State" xmi:id="_CqkOQLK5Ee-RiKxTBWT2AQ" name="RECEIVE FEEDBACK"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_FPfCELK5Ee-RiKxTBWT2AQ" name=""/>
+          </region>
+        </subvertex>
+      </region>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_4vaaELJzEe-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4vcPQLJzEe-RiKxTBWT2AQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <ActionLanguage:TextualRepresentation xmi:id="_PIFpcLK6Ee-RiKxTBWT2AQ" base_Comment="_PIEbULK6Ee-RiKxTBWT2AQ" language="org.eclipse.papyrus.uml.textedit.state.xtext.UmlState"/>
+</xmi:XMI>

@@ -1,0 +1,206 @@
+/* General Dark Theme */
+body {
+    background-color: #0d0121;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #120037;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links .dropdown-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links .dropdown-button:hover {
+    color: #6a5acd;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #6a5acd;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #1a0a3c;
+    top: 50px;
+    left: 0;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+    animation: dropdown-fade 0.3s ease-out;
+}
+
+@keyframes dropdown-fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 8px 15px;
+    display: block;
+    color: white;
+}
+
+/* Search and Filter Section */
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid #6a5acd;
+    background-color: #1f053e;
+    color: white;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #6a5acd;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #9f86ff;
+}
+
+.filter-dropdown {
+    position: relative;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    background-color: #6a5acd;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: #9f86ff;
+}
+
+.filter-menu {
+    display: none;
+    position: absolute;
+    background-color: #1a0a3c;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 5px;
+    z-index: 10;
+}
+
+.filter-dropdown:hover .filter-menu {
+    display: block;
+    animation: dropdown-fade 0.3s ease-out;
+}
+
+.filter-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.filter-menu li a:hover {
+    background-color: #6a5acd;
+}
+
+/* Courses Section */
+.courses {
+    padding: 50px 20px;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.course-card {
+    background-color: #1f053e;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(106, 90, 205, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(106, 90, 205, 0.9);
+}

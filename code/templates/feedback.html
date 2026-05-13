@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='feedback.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="/" class="logo">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <button class="dropdown-button">Courses</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/enrolled_courses">Enrolled Courses</a></li>
+                    <li><a href="/all_courses">All Courses</a></li>
+                </ul>
+            </li>
+            <li><a href="/activities">Activities</a></li>
+            <li><a href="/feedback">Feedback</a></li>
+            <li class="dropdown">
+                <button class="dropdown-button">Account</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/account">View Account</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section">
+        <h1>Provide Feedback</h1>
+        <div class="courses-grid">
+            {% for course in enrolled_courses %}
+            <div class="course-card" onclick="openFeedbackPopup('{{ course.Course_id }}', '{{ course.Teacher_id }}')">
+                <h2>{{ course.Course_name }}</h2>
+                <p><strong>Module:</strong> {{ course.Module_name }}</p>
+                <p><strong>Instructor:</strong> {{ course.teacher_first_name }} {{ course.teacher_last_name }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    
+    <!-- Feedback Popup -->
+    <div id="feedback-popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Submit Feedback</h2>
+            <textarea id="feedback-text" placeholder="Write your feedback here..."></textarea>
+            <div class="popup-buttons">
+                <button id="cancel-feedback" onclick="closeFeedbackPopup()">Cancel</button>
+                <button id="submit-feedback">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedCourseId = null;
+        let selectedTeacherId = null;
+    
+        function openFeedbackPopup(courseId, teacherId) {
+            selectedCourseId = courseId;
+            selectedTeacherId = teacherId;
+            document.getElementById('feedback-popup').classList.remove('hidden');
+        }
+    
+        function closeFeedbackPopup() {
+            selectedCourseId = null;
+            selectedTeacherId = null;
+            document.getElementById('feedback-popup').classList.add('hidden');
+        }
+    
+        document.getElementById('submit-feedback').addEventListener('click', function () {
+            const feedbackText = document.getElementById('feedback-text').value.trim();
+            if (!feedbackText) {
+                alert("Feedback cannot be empty!");
+                return;
+            }
+    
+            fetch('/submit_feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    course_id: selectedCourseId,
+                    teacher_id: selectedTeacherId,
+                    feedback_text: feedbackText
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === "Feedback submitted successfully!") {
+                    alert("Feedback submitted successfully!");
+                    closeFeedbackPopup();
+                } else {
+                    alert("Error submitting feedback. Please try again.");
+                }
+            })
+            .catch(error => {
+                alert("Error submitting feedback. Please try again.");
+                console.error('Error:', error);
+            });
+        });
+    </script>
+    <script>
+        const dropdownButtons = document.querySelectorAll(".dropdown-button");
+
+        dropdownButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const dropdown = event.target.closest(".dropdown");
+            dropdown.classList.add("active");
+
+            setTimeout(() => {
+                dropdown.classList.remove("active");
+            }, 2000); // Auto-hide after 2 seconds
+        });
+        });
+    </script>
+</body>
+</html>

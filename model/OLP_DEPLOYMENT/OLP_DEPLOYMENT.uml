@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_yNcP0LGMEe-9P7DdgPrQwA" name="OLP_DEPLOYMENT">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_yUujkLGMEe-9P7DdgPrQwA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Node" xmi:id="_5GdWELGMEe-9P7DdgPrQwA" name="CLIENT DEVICE">
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_N1KZwLGNEe-9P7DdgPrQwA" name="Artifact1"/>
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_9-pRULJuEe-RiKxTBWT2AQ" name="LOGIN"/>
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_BA0o4LJvEe-RiKxTBWT2AQ" name="SELECT COURSE" fileName=""/>
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_DquDULJvEe-RiKxTBWT2AQ" name="ACTIVITIES"/>
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_JUHUwLJvEe-RiKxTBWT2AQ" name="FEEDBACK"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_-ftSsLGMEe-9P7DdgPrQwA" name="WEB SERVER">
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_uG-f8LJsEe-RiKxTBWT2AQ" name="STUDENT MANG"/>
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_wPdPYLJsEe-RiKxTBWT2AQ" name="TEACHER MANG"/>
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_yJlZwLJsEe-RiKxTBWT2AQ" name="ADMIN MANG"/>
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="__u1HcLJsEe-RiKxTBWT2AQ" name="COURSE MANG"/>
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_BLzbwLJtEe-RiKxTBWT2AQ" name="ACTIVITY MANG"/>
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_DPg_8LJtEe-RiKxTBWT2AQ" name="FEEDBACK MANG"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Node" xmi:id="_AyIBQLGNEe-9P7DdgPrQwA" name="DATABASE SERVER">
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_GImF4LJtEe-RiKxTBWT2AQ" name="STUDENT DATA" fileName=""/>
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_V4ROULJuEe-RiKxTBWT2AQ" name="TEACHER DATA"/>
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_Y2oc4LJuEe-RiKxTBWT2AQ" name="COURSES DATA"/>
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_coPQ0LJvEe-RiKxTBWT2AQ" name="FEEDBACK DATA"/>
+    <nestedClassifier xmi:type="uml:Artifact" xmi:id="_gJJLwLJvEe-RiKxTBWT2AQ" name="ACTIVITY DATA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_QVq94LJtEe-RiKxTBWT2AQ" name="HTTP" memberEnd="_QVuoQLJtEe-RiKxTBWT2AQ _QVxEgLJtEe-RiKxTBWT2AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QVszELJtEe-RiKxTBWT2AQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QVtaILJtEe-RiKxTBWT2AQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_QVuoQLJtEe-RiKxTBWT2AQ" name="web server" type="_-ftSsLGMEe-9P7DdgPrQwA" association="_QVq94LJtEe-RiKxTBWT2AQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_QVxEgLJtEe-RiKxTBWT2AQ" name="client device" type="_5GdWELGMEe-9P7DdgPrQwA" association="_QVq94LJtEe-RiKxTBWT2AQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_STWykLJtEe-RiKxTBWT2AQ" name="DATABASE CONNECTION" memberEnd="_STXZorJtEe-RiKxTBWT2AQ _STYAsLJtEe-RiKxTBWT2AQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_STXZoLJtEe-RiKxTBWT2AQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_STXZobJtEe-RiKxTBWT2AQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_STXZorJtEe-RiKxTBWT2AQ" name="database server" type="_AyIBQLGNEe-9P7DdgPrQwA" association="_STWykLJtEe-RiKxTBWT2AQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_STYAsLJtEe-RiKxTBWT2AQ" name="web server" type="_-ftSsLGMEe-9P7DdgPrQwA" association="_STWykLJtEe-RiKxTBWT2AQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Of-VoLJvEe-RiKxTBWT2AQ" client="_9-pRULJuEe-RiKxTBWT2AQ" supplier="_BA0o4LJvEe-RiKxTBWT2AQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_R1QPYLJvEe-RiKxTBWT2AQ" client="_BA0o4LJvEe-RiKxTBWT2AQ" supplier="_DquDULJvEe-RiKxTBWT2AQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_TD7B8LJvEe-RiKxTBWT2AQ" client="_DquDULJvEe-RiKxTBWT2AQ" supplier="_JUHUwLJvEe-RiKxTBWT2AQ"/>
+</uml:Model>

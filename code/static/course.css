@@ -1,0 +1,239 @@
+/* General Styling */
+body {
+    background-color: #0d0121;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #120037;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links .dropdown-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links .dropdown-button:hover {
+    color: #6a5acd;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #6a5acd;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #1a0a3c;
+    top: 50px;
+    left: 0;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+    animation: dropdown-fade 0.3s ease-out;
+}
+
+@keyframes dropdown-fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 8px 15px;
+    display: block;
+    color: white;
+}
+
+/* Course Details Styling */
+.course-details {
+    margin-bottom: 30px;
+}
+
+.details-card {
+    background-color: rgba(106, 90, 205, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(106, 90, 205, 0.2);
+}
+
+.details-grid {
+    display: grid;
+    gap: 10px;
+}
+
+/* Activities Grid */
+.activities-grid, .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Activity Card Styling */
+.activity-card {
+    background-color: #1f053e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(106, 90, 205, 0.7);
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.activity-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(106, 90, 205, 0.9);
+}
+
+/* Resource Card Styling */
+.resource-card {
+    text-align: center;
+}
+
+.resource-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6a5acd;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(106, 90, 205, 0.6);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.resource-link:hover {
+    background-color: #9f86ff;
+    box-shadow: 0 5px 12px rgba(106, 90, 205, 0.9);
+}
+
+.action-button {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.enroll-button, .unenroll-button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.enroll-button {
+    background-color: #6a5acd;
+    color: white;
+}
+
+.enroll-button:hover {
+    background-color: #9f86ff;
+}
+
+.unenroll-button {
+    background-color: #ff4b5c;
+    color: white;
+}
+
+.unenroll-button:hover {
+    background-color: #ff1e33;
+}
+
+/* Submission Section */
+.submission {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.file-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #6a5acd;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border: 2px solid #6a5acd;
+    border-radius: 5px;
+    background-color: rgba(106, 90, 205, 0.1);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="file"]:hover {
+    background-color: rgba(106, 90, 205, 0.2);
+}
+
+.submit-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #6a5acd;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #9f86ff;
+    transform: scale(1.05);
+}

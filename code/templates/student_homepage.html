@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='student_homepage.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="/" class="logo">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <button class="dropdown-button">Courses</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/enrolled_courses">Enrolled Courses</a></li>
+                    <li><a href="/all_courses">All Courses</a></li>
+                </ul>
+            </li>
+            <li><a href="/activities">Activities</a></li>
+            <li><a href="/feedback">Feedback</a></li>
+            <li class="dropdown">
+                <button class="dropdown-button">Account</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/account">View Account</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+
+    <section class="new-courses">
+        <h1>New Courses</h1>
+        <div class="carousel">
+            <button class="carousel-button prev">←</button>
+            <div class="carousel-track-container">
+                <div class="carousel-track">
+                    {% for course in new_courses %}
+                    <div class="course-card" data-url="{{ url_for('course_details', course_id=loop.index) }}">
+                        <h2>{{ course.title }}</h2>
+                        <p><strong>Module:</strong> {{ course.module }}</p>
+                        <p><strong>Instructor:</strong> {{ course.teacher_name }}</p>
+                    </div>                                    
+                    {% endfor %}
+                </div>
+            </div>
+            <button class="carousel-button next">→</button>
+        </div>
+    </section>
+    
+    
+
+    <!-- Activities Section -->
+    <section class="activities">
+        <h1>Activities</h1>
+        <div class="activities-grid">
+            {% for activity in activities %}
+            <div class="activity-card" onclick="location.href='/activity.html'">
+                <h2>{{ activity.title }}</h2>
+                <p><strong>Due:</strong> {{ activity.due_date }}</p>
+                <p>{{ activity.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='student_homepage.js') }}"></script>
+</body>
+</html>

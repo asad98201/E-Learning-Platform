@@ -1,0 +1,146 @@
+/* General Dark Theme */
+body {
+    background-color: #0d0121;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #120037;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links .dropdown-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links .dropdown-button:hover {
+    color: #6a5acd;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #6a5acd;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #1a0a3c;
+    top: 50px;
+    left: 0;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+    animation: dropdown-fade 0.3s ease-out;
+}
+
+@keyframes dropdown-fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 8px 15px;
+    display: block;
+    color: white;
+}
+
+/* Activities Section */
+.activities {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.course-section {
+    margin-bottom: 50px;
+}
+
+.course-section h1 {
+    font-size: 2rem;
+    color: #6a5acd;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #6a5acd;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.activities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.activity-card {
+    background-color: #1f053e;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(106, 90, 205, 0.6);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(106, 90, 205, 0.9);
+}
+
+.activity-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.activity-card p {
+    margin: 5px 0;
+}

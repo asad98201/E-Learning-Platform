@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='activities.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="/" class="logo">
+            <img src="logo.png" alt="Logo">
+        </a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <button class="dropdown-button">Courses</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/enrolled_courses">Enrolled Courses</a></li>
+                    <li><a href="/all_courses">All Courses</a></li>
+                </ul>
+            </li>
+            <li><a href="/activities">Activities</a></li>
+            <li><a href="/feedback">Feedback</a></li>
+            <li class="dropdown">
+                <button class="dropdown-button">Account</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/account">View Account</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Activities Section -->
+    <section class="activities">
+        {% for course in courses_activities %}
+        <div class="course-section">
+            <h1>{{ course.course_name }}</h1>
+            <div class="activities-grid">
+                {% for activity in course.activities %}
+                <div class="activity-card" onclick="location.href='/activity/{{ activity.id }}'">
+                    <h2>{{ activity.title }}</h2>
+                    <p><strong>Due:</strong> {{ activity.due_date }}</p>
+                    <p>{{ activity.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+    <script>
+        const dropdownButtons = document.querySelectorAll(".dropdown-button");
+
+        dropdownButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const dropdown = event.target.closest(".dropdown");
+            dropdown.classList.add("active");
+
+            setTimeout(() => {
+                dropdown.classList.remove("active");
+            }, 2000); // Auto-hide after 2 seconds
+        });
+        });
+    </script>
+</body>
+</html>

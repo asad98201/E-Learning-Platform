@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_DtGQALK-Ee-RiKxTBWT2AQ" name="OLP_TIMING_DIAG">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_DuR7wLK-Ee-RiKxTBWT2AQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_F5BVALK-Ee-RiKxTBWT2AQ" name="TIMING DIAGRAM">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_SQ2X4LK_Ee-RiKxTBWT2AQ" name="STUDENT" coveredBy="_vWR187K_Ee-RiKxTBWT2AQ _4U6k4LK_Ee-RiKxTBWT2AQ _4U7zB7K_Ee-RiKxTBWT2AQ _6nbSsLLCEe-RiKxTBWT2AQ _6ndu8LLCEe-RiKxTBWT2AQ _gEmCULLEEe-RiKxTBWT2AQ _gEn3g7LEEe-RiKxTBWT2AQ _qEBf4LLEEe-RiKxTBWT2AQ _qEDVErLEEe-RiKxTBWT2AQ _brKugLLFEe-RiKxTBWT2AQ _brL8pLLFEe-RiKxTBWT2AQ _JCv-sLLBEe-RiKxTBWT2AQ _MO-qILLBEe-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vWR18LK_Ee-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.LifelineStateDefinitions">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vWR18bK_Ee-RiKxTBWT2AQ" key="_vWRO4LK_Ee-RiKxTBWT2AQ" value="START/STOP"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_05K2w7K_Ee-RiKxTBWT2AQ" key="_05K2wLK_Ee-RiKxTBWT2AQ" value="LOGIN"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5OqI87LCEe-RiKxTBWT2AQ" key="_5OqI8LLCEe-RiKxTBWT2AQ" value="ENROLL"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_edOb4bLEEe-RiKxTBWT2AQ" key="_edN00LLEEe-RiKxTBWT2AQ" value="PERFORM ACTIVITY"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oi6Sc7LEEe-RiKxTBWT2AQ" key="_oi6ScLLEEe-RiKxTBWT2AQ" value="SUBMIT ACTIVITY"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aRJAg7LFEe-RiKxTBWT2AQ" key="_aRJAgLLFEe-RiKxTBWT2AQ" value="SUBMIT FEEDBACK"/>
+      </eAnnotations>
+    </lifeline>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_W1j5MLK_Ee-RiKxTBWT2AQ" name="ADMIN" coveredBy="__q5zoLLCEe-RiKxTBWT2AQ _HqI7ELLDEe-RiKxTBWT2AQ _HqKwQ7LDEe-RiKxTBWT2AQ _y3sxcLLDEe-RiKxTBWT2AQ _y3umpLLDEe-RiKxTBWT2AQ _JSfHALLFEe-RiKxTBWT2AQ _JSgVJ7LFEe-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__q5MkbLCEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.LifelineStateDefinitions">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__q5MkrLCEe-RiKxTBWT2AQ" key="__q4lgLLCEe-RiKxTBWT2AQ" value="IDLE"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CYNHY7LDEe-RiKxTBWT2AQ" key="_CYNHYLLDEe-RiKxTBWT2AQ" value="VERIFY &amp; APPROVE"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xBKGk7LDEe-RiKxTBWT2AQ" key="_xBKGkLLDEe-RiKxTBWT2AQ" value="ASSIGN TEACHER"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IF3i4LLFEe-RiKxTBWT2AQ" key="_IF270LLFEe-RiKxTBWT2AQ" value="FEEDBACK FORM"/>
+      </eAnnotations>
+    </lifeline>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_bsHYcLK_Ee-RiKxTBWT2AQ" name="TEACHER" coveredBy="_8rcjcLLDEe-RiKxTBWT2AQ ___8aELLDEe-RiKxTBWT2AQ ___-PR7LDEe-RiKxTBWT2AQ _v4WO8LLEEe-RiKxTBWT2AQ _v4YEILLEEe-RiKxTBWT2AQ _qJeLILLFEe-RiKxTBWT2AQ _qJeyNLLFEe-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8rb8YrLDEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.LifelineStateDefinitions">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8rb8Y7LDEe-RiKxTBWT2AQ" key="_8rbVULLDEe-RiKxTBWT2AQ" value="IDLE"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9uAMobLDEe-RiKxTBWT2AQ" key="_9t_lkLLDEe-RiKxTBWT2AQ" value="ASSIGN ACTIVITY"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uTDFEbLEEe-RiKxTBWT2AQ" key="_uTCeALLEEe-RiKxTBWT2AQ" value="EVALUATE ACTIVITY"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oU7rY7LFEe-RiKxTBWT2AQ" key="_oU7rYLLFEe-RiKxTBWT2AQ" value="RECEIVE FEEDBACK"/>
+      </eAnnotations>
+    </lifeline>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_dNEN0LK_Ee-RiKxTBWT2AQ" name="SYSTEM" coveredBy="_xPN4ELLAEe-RiKxTBWT2AQ _2xGMQLLAEe-RiKxTBWT2AQ _2xHaZ7LAEe-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xPMp87LAEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.LifelineStateDefinitions">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xPNRALLAEe-RiKxTBWT2AQ" key="_xPMp8LLAEe-RiKxTBWT2AQ" value="IDLE"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yjvbAbLAEe-RiKxTBWT2AQ" key="_yjuz8LLAEe-RiKxTBWT2AQ" value="WAITING"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1M2LQ7LAEe-RiKxTBWT2AQ" key="_1M2LQLLAEe-RiKxTBWT2AQ" value="PROCESSING"/>
+      </eAnnotations>
+    </lifeline>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_ONCuwLLAEe-RiKxTBWT2AQ" name="DATABASE" coveredBy="_VFewxrLBEe-RiKxTBWT2AQ _YN89kLLBEe-RiKxTBWT2AQ _YN-LtrLBEe-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VFeww7LBEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.LifelineStateDefinitions">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VFewxLLBEe-RiKxTBWT2AQ" key="_VFewwLLBEe-RiKxTBWT2AQ" value="IDLE"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WaQyY7LBEe-RiKxTBWT2AQ" key="_WaQyYLLBEe-RiKxTBWT2AQ" value="PROCESSING"/>
+      </eAnnotations>
+    </lifeline>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_vWR187K_Ee-RiKxTBWT2AQ" name="START/STOP_1" covered="_SQ2X4LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vWSdALK_Ee-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vWSdAbK_Ee-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_vWRO4LK_Ee-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_vWR19LK_Ee-RiKxTBWT2AQ" name="InState_START/STOP">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_vWR19bK_Ee-RiKxTBWT2AQ">
+          <body>START/STOP</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_4U6k4LK_Ee-RiKxTBWT2AQ" name="START/STOP_1_To_LOGIN_1" covered="_SQ2X4LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4U6k4bK_Ee-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.autogeneratedOccurrenceSpecificationName"/>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_4U7zB7K_Ee-RiKxTBWT2AQ" name="LOGIN_1" covered="_SQ2X4LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4U8aELK_Ee-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4U8aEbK_Ee-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_05K2wLK_Ee-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_4U7zCLK_Ee-RiKxTBWT2AQ" name="InState_LOGIN">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_4U7zCbK_Ee-RiKxTBWT2AQ">
+          <body>LOGIN</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_6nbSsLLCEe-RiKxTBWT2AQ" name="LOGIN_1_To_ENROLL_1" covered="_SQ2X4LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6nbSsbLCEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.autogeneratedOccurrenceSpecificationName"/>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_6ndu8LLCEe-RiKxTBWT2AQ" name="ENROLL_1" covered="_SQ2X4LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6ndu87LCEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6ndu9LLCEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_5OqI8LLCEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_6ndu8bLCEe-RiKxTBWT2AQ" name="InState_ENROLL">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_6ndu8rLCEe-RiKxTBWT2AQ">
+          <body>ENROLL</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_gEmCULLEEe-RiKxTBWT2AQ" name="ENROLL_1_To_PERFORM ACTIVITY_1" covered="_SQ2X4LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gEmCUbLEEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.autogeneratedOccurrenceSpecificationName"/>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_gEn3g7LEEe-RiKxTBWT2AQ" name="PERFORM ACTIVITY_1" covered="_SQ2X4LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gEoekLLEEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gEoekbLEEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_edN00LLEEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_gEn3hLLEEe-RiKxTBWT2AQ" name="InState_PERFORM ACTIVITY">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_gEn3hbLEEe-RiKxTBWT2AQ">
+          <body>PERFORM ACTIVITY</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_qEBf4LLEEe-RiKxTBWT2AQ" name="PERFORM ACTIVITY_1_To_SUBMIT ACTIVITY_1" covered="_SQ2X4LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qEBf4bLEEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.autogeneratedOccurrenceSpecificationName"/>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_qEDVErLEEe-RiKxTBWT2AQ" name="SUBMIT ACTIVITY_1" covered="_SQ2X4LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qED8ILLEEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qED8IbLEEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_oi6ScLLEEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_qEDVE7LEEe-RiKxTBWT2AQ" name="InState_SUBMIT ACTIVITY">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_qEDVFLLEEe-RiKxTBWT2AQ">
+          <body>SUBMIT ACTIVITY</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_brKugLLFEe-RiKxTBWT2AQ" name="SUBMIT ACTIVITY_1_To_SUBMIT FEEDBACK_1" covered="_SQ2X4LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_brKugbLFEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.autogeneratedOccurrenceSpecificationName"/>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_brL8pLLFEe-RiKxTBWT2AQ" name="SUBMIT FEEDBACK_1" covered="_SQ2X4LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_brL8p7LFEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_brL8qLLFEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_aRJAgLLFEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_brL8pbLFEe-RiKxTBWT2AQ" name="InState_SUBMIT FEEDBACK">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_brL8prLFEe-RiKxTBWT2AQ">
+          <body>SUBMIT FEEDBACK</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_xPN4ELLAEe-RiKxTBWT2AQ" name="IDLE_1" covered="_dNEN0LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xPN4E7LAEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xPN4FLLAEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_xPMp8LLAEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_xPN4EbLAEe-RiKxTBWT2AQ" name="InState_IDLE">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_xPN4ErLAEe-RiKxTBWT2AQ">
+          <body>IDLE</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_2xGMQLLAEe-RiKxTBWT2AQ" name="IDLE_1_To_PROCESSING_1" covered="_dNEN0LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2xGMQbLAEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.autogeneratedOccurrenceSpecificationName"/>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_2xHaZ7LAEe-RiKxTBWT2AQ" name="PROCESSING_1" covered="_dNEN0LK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2xIBcLLAEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2xIBcbLAEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_1M2LQLLAEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_2xHaaLLAEe-RiKxTBWT2AQ" name="InState_PROCESSING">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_2xHaabLAEe-RiKxTBWT2AQ">
+          <body>PROCESSING</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JCv-sLLBEe-RiKxTBWT2AQ" name="Message13SendEvent" covered="_SQ2X4LK_Ee-RiKxTBWT2AQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_MO-qILLBEe-RiKxTBWT2AQ" name="Message15SendEvent" covered="_SQ2X4LK_Ee-RiKxTBWT2AQ"/>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_VFewxrLBEe-RiKxTBWT2AQ" name="IDLE_1" covered="_ONCuwLLAEe-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VFfX0LLBEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VFfX0bLBEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_VFewwLLBEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_VFewx7LBEe-RiKxTBWT2AQ" name="InState_IDLE">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_VFewyLLBEe-RiKxTBWT2AQ">
+          <body>IDLE</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_YN89kLLBEe-RiKxTBWT2AQ" name="IDLE_1_To_PROCESSING_1" covered="_ONCuwLLAEe-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YN89kbLBEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.autogeneratedOccurrenceSpecificationName"/>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_YN-LtrLBEe-RiKxTBWT2AQ" name="PROCESSING_1" covered="_ONCuwLLAEe-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YN-LubLBEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YN-LurLBEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_WaQyYLLBEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_YN-Lt7LBEe-RiKxTBWT2AQ" name="InState_PROCESSING">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_YN-LuLLBEe-RiKxTBWT2AQ">
+          <body>PROCESSING</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="__q5zoLLCEe-RiKxTBWT2AQ" name="IDLE_1" covered="_W1j5MLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__q6asLLCEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__q6asbLCEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="__q4lgLLCEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="__q5zobLCEe-RiKxTBWT2AQ" name="InState_IDLE">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="__q5zorLCEe-RiKxTBWT2AQ">
+          <body>IDLE</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_HqI7ELLDEe-RiKxTBWT2AQ" name="IDLE_1_To_VERIFY &amp; APPROVE_1" covered="_W1j5MLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HqI7EbLDEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.autogeneratedOccurrenceSpecificationName"/>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_HqKwQ7LDEe-RiKxTBWT2AQ" name="VERIFY &amp; APPROVE_1" covered="_W1j5MLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HqLXULLDEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HqLXUbLDEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_CYNHYLLDEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_HqKwRLLDEe-RiKxTBWT2AQ" name="InState_VERIFY &amp; APPROVE">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_HqKwRbLDEe-RiKxTBWT2AQ">
+          <body>VERIFY &amp; APPROVE</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_y3sxcLLDEe-RiKxTBWT2AQ" name="VERIFY &amp; APPROVE_1_To_ASSIGN TEACHER_1" covered="_W1j5MLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_y3sxcbLDEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.autogeneratedOccurrenceSpecificationName"/>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_y3umpLLDEe-RiKxTBWT2AQ" name="ASSIGN TEACHER_1" covered="_W1j5MLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_y3vNsLLDEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y3vNsbLDEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_xBKGkLLDEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_y3umpbLDEe-RiKxTBWT2AQ" name="InState_ASSIGN TEACHER">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_y3umprLDEe-RiKxTBWT2AQ">
+          <body>ASSIGN TEACHER</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_JSfHALLFEe-RiKxTBWT2AQ" name="ASSIGN TEACHER_1_To_FEEDBACK FORM_1" covered="_W1j5MLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JSfHAbLFEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.autogeneratedOccurrenceSpecificationName"/>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_JSgVJ7LFEe-RiKxTBWT2AQ" name="FEEDBACK FORM_1" covered="_W1j5MLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JSgVKrLFEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JSgVK7LFEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_IF270LLFEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_JSgVKLLFEe-RiKxTBWT2AQ" name="InState_FEEDBACK FORM">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_JSgVKbLFEe-RiKxTBWT2AQ">
+          <body>FEEDBACK FORM</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_8rcjcLLDEe-RiKxTBWT2AQ" name="IDLE_1" covered="_bsHYcLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8rcjc7LDEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8rcjdLLDEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_8rbVULLDEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_8rcjcbLDEe-RiKxTBWT2AQ" name="InState_IDLE">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_8rcjcrLDEe-RiKxTBWT2AQ">
+          <body>IDLE</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="___8aELLDEe-RiKxTBWT2AQ" name="IDLE_1_To_ASSIGN ACTIVITY_1" covered="_bsHYcLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="___9BILLDEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.autogeneratedOccurrenceSpecificationName"/>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="___-PR7LDEe-RiKxTBWT2AQ" name="ASSIGN ACTIVITY_1" covered="_bsHYcLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="___-2ULLDEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="___-2UbLDEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_9t_lkLLDEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="___-PSLLDEe-RiKxTBWT2AQ" name="InState_ASSIGN ACTIVITY">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="___-PSbLDEe-RiKxTBWT2AQ">
+          <body>ASSIGN ACTIVITY</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_v4WO8LLEEe-RiKxTBWT2AQ" name="ASSIGN ACTIVITY_1_To_EVALUATE ACTIVITY_1" covered="_bsHYcLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_v4WO8bLEEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.autogeneratedOccurrenceSpecificationName"/>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_v4YEILLEEe-RiKxTBWT2AQ" name="EVALUATE ACTIVITY_1" covered="_bsHYcLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_v4YEI7LEEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_v4YrMLLEEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_uTCeALLEEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_v4YEIbLEEe-RiKxTBWT2AQ" name="InState_EVALUATE ACTIVITY">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_v4YEIrLEEe-RiKxTBWT2AQ">
+          <body>EVALUATE ACTIVITY</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <fragment xmi:type="uml:OccurrenceSpecification" xmi:id="_qJeLILLFEe-RiKxTBWT2AQ" name="EVALUATE ACTIVITY_1_To_RECEIVE FEEDBACK_1" covered="_bsHYcLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qJeLIbLFEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.autogeneratedOccurrenceSpecificationName"/>
+    </fragment>
+    <fragment xmi:type="uml:StateInvariant" xmi:id="_qJeyNLLFEe-RiKxTBWT2AQ" name="RECEIVE FEEDBACK_1" covered="_bsHYcLK_Ee-RiKxTBWT2AQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qJeyN7LFEe-RiKxTBWT2AQ" source="org.eclipse.papyrus.uml.diagram.timing.StateInvariant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qJeyOLLFEe-RiKxTBWT2AQ" key="org.eclipse.papyrus.uml.diagram.timing.StateInvariantStateDefinitionId" value="_oU7rYLLFEe-RiKxTBWT2AQ"/>
+      </eAnnotations>
+      <invariant xmi:type="uml:Constraint" xmi:id="_qJeyNbLFEe-RiKxTBWT2AQ" name="InState_RECEIVE FEEDBACK">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_qJeyNrLFEe-RiKxTBWT2AQ">
+          <body>RECEIVE FEEDBACK</body>
+        </specification>
+      </invariant>
+    </fragment>
+    <message xmi:type="uml:Message" xmi:id="_DbgCULLBEe-RiKxTBWT2AQ" name="VALIDATE CREDENTIALS"/>
+    <message xmi:type="uml:Message" xmi:id="_gqKU4LLBEe-RiKxTBWT2AQ" name="AUTHENTICATE USER"/>
+    <message xmi:type="uml:Message" xmi:id="_rqicoLLCEe-RiKxTBWT2AQ" name="RETURN"/>
+    <message xmi:type="uml:Message" xmi:id="_v9tiALLCEe-RiKxTBWT2AQ" name="VALID"/>
+    <message xmi:type="uml:Message" xmi:id="_PAUecLLDEe-RiKxTBWT2AQ" name="VERIFY ENROLLMENT"/>
+    <message xmi:type="uml:Message" xmi:id="_VeusULLDEe-RiKxTBWT2AQ" name="APPROVED"/>
+    <message xmi:type="uml:Message" xmi:id="_a-QaoLLEEe-RiKxTBWT2AQ" name="ACTIVITY ASSIGNED"/>
+    <message xmi:type="uml:Message" xmi:id="_0pLgsLLEEe-RiKxTBWT2AQ" name="SUBMIT ACTIVITY"/>
+    <message xmi:type="uml:Message" xmi:id="_WF8LYLLFEe-RiKxTBWT2AQ" name="FEEDBACK FORM"/>
+    <message xmi:type="uml:Message" xmi:id="_uCN-ULLFEe-RiKxTBWT2AQ" name="SUBMIT FEEDBACK"/>
+  </packagedElement>
+</uml:Model>
